@@ -1,0 +1,76 @@
+
+> frontend@0.0.0 dev
+> vite --host
+
+
+  VITE v4.5.0  ready in 308 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://172.31.16.184:5173/
+5:30:19 PM [vite] .env.sample changed, restarting server...
+5:30:19 PM [vite] server restarted.
+5:31:04 PM [vite] .env.local changed, restarting server...
+5:31:04 PM [vite] server restarted.
+
+> frontend@0.0.0 dev
+> vite --host
+
+Port 5173 is in use, trying another one...
+
+  VITE v4.5.0  ready in 309 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://172.31.16.184:5174/
+
+> frontend@0.0.0 dev
+> vite --host
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  VITE v4.5.0  ready in 333 ms
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: http://172.31.16.184:5175/
+6:38:45 PM [vite] .env.sample changed, restarting server...
+6:38:45 PM [vite] .env.sample changed, restarting server...
+6:38:45 PM [vite] .env.sample changed, restarting server...
+6:38:46 PM [vite] server restarted.
+Port 5173 is in use, trying another one...
+6:38:46 PM [vite] server restarted.
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://172.31.16.184:5174/
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+6:38:46 PM [vite] server restarted.
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: http://172.31.16.184:5175/
+6:39:08 PM [vite] .env.local changed, restarting server...
+6:39:08 PM [vite] .env.local changed, restarting server...
+6:39:08 PM [vite] .env.local changed, restarting server...
+6:39:08 PM [vite] server restarted.
+Port 5173 is in use, trying another one...
+6:39:08 PM [vite] server restarted.
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+6:39:08 PM [vite] server restarted.
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: http://172.31.16.184:5175/
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://172.31.16.184:5174/
+
+> frontend@0.0.0 dev
+> vite --host
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+
+  VITE v4.5.0  ready in 393 ms
+
+  ➜  Local:   http://localhost:5176/
+  ➜  Network: http://172.31.16.184:5176/
