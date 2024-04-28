@@ -6,15 +6,15 @@ In the ever-evolving landscape of software development, the integration of secur
 
 ## Tools Covered
 
-> Linux: `The foundational operating system for hosting our DevOps and DevSecOps tools.`
-> Git and GitHub: `Version control system and collaboration platform for managing code repositories.`
-> Docker: `Containerization platform used for packaging applications and their dependencies into standardized units.`
+- Linux: `The foundational operating system for hosting our DevOps and DevSecOps tools.`
+- Git and GitHub: `Version control system and collaboration platform for managing code repositories.`
+- Docker: `Containerization platform used for packaging applications and their dependencies into standardized units.`
 - Docker-compose: `Tool for defining and running multi-container Docker applications.`
-> Jenkins CI/CD: Automation server for building, testing, and deploying software continuously.
-- **SonarQube Scan**: Static code analysis tool for identifying and fixing code quality and security issues.
-- **SonarQube Quality Gates**: Criteria set to ensure code quality and security standards are met before code is deployed.
+- Jenkins CI/CD: `Automation server for building, testing, and deploying software continuously.`
+- SonarQube Scan: `Static code analysis tool for identifying and fixing code quality and security issues.`
+- **SonarQube Quality Gates**: `Criteria set to ensure code quality and security standards are met before code is deployed.`
 - **Trivy**: Vulnerability scanner for container images, providing insights into security risks.
-```
+
 ## Project Overview
 
 This project focuses on deploying a 3-tier application using Docker and implementing Continuous Integration/Continuous Deployment (CI/CD) pipelines with Jenkins. The emphasis is on incorporating DevSecOps practices throughout the development and deployment process. By following along with this project, you will gain practical experience with each of the covered tools and learn how to seamlessly integrate security into your DevOps workflow.
