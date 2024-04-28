@@ -1,84 +1,104 @@
-# Wanderlust - Your Ultimate Travel Blog 🌍✈️
+### In this project, we will learn about  DevOps and DevSecOps tools in one project:
+
+### Tools Covered:
+-  Linux
+-  Git and GitHub
+-  Docker
+-  Docker-compose
+-  Jenkins CI/CD
+-  SonarQube Scan
+-  SonarQube Quality Gates
+-  Trivy 
+
+#
+
+## Pre-requisites to implement this project:
+
+-  AWS EC2 instance (Ubuntu) with instance type t2.large and root volume 29GB.
+
+-  Jenkins installed <br>
+    - Reference: <b><a href="https://www.jenkins.io/doc/book/installing/linux/#long-term-support-release"><u> Jenkins installation </a></u></b>
+
+-  Docker and docker-compose installled
+```bash
+    sudo apt-get update
+    sudo apt-get install docker.io -y
+    sudo apt-get install docker-compose -y
+```
+
+- Trivy installed <br>
+    - Reference: <b> <a href="https://github.com/DevMadhup/Trivy_Installation_and_implementation/blob/main/README.md"><u>Trivy Installation</a></u></b>
+
+- SonarQube Server installed
+```bash
+    docker run -itd --name sonarqube-server -p 9000:9000 sonarqube:lts-community
+```
+#
+## Steps for Jenkins CI/CD:
+
+1)  Access Jenkins UI and setup Jenkins
+
+![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/1eec417e-95ab-4497-ad31-443ecd6b999e)
+
+#
+
+2)  Plugins Installation:
+
+    - Go to <b><i><u>Manage Jenkins</u></i></b>, click on <b><i><u>Plugins</u></i></b> and install all the plugins listed below, we will require for other tools integration:
+
+        - SonarQube Scanner (Version2.16.1)
+        - Sonar Quality Gates (Version1.3.1)
+        - OWASP Dependency-Check (Version5.4.3)
+        - Docker (Version1.5)
+#
+
+3) Go to SonarQube Server and create token
+
+    - Click on <b><i><u> Administration </u></i></b> tab, then <b><i><u> Security </u></i></b>, then <b><i><u> Users </u></i></b> and create Token.
+    -  Create a webhook to notify Jenkins that Quality gates scanning is done. (We will need this step later)
+
+        - Go to SonarQube Server, then <b><i><u> Administration </u></i></b>, then <b><i><u> Configuration </u></i></b> and click on <b><i><u> Webhook </u></i></b>, add webhook in below <b>Format</b>:
+        > http://<jenkins_url>:8080/sonarqube-webhook/
+        
+        Example: 
+        
+        ```bash
+            http://34.207.58.19:8080/sonarqube-webhook/
+        ```
+
+        ![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/b9ef2301-b8ff-46f4-a457-6345d5e2dab6)
 
 
-## 🎯 Goal of this project
+        ![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/08a33164-f6a6-4c5d-8a34-7091cf8a5745)
 
+#
 
-## Setting up the project locally
+4) Go to Jenkins UI <b><i><u> Manage Jenkins </u></i></b>, then <b><i><u> Credentials </u></i></b> and add SonarQube Credentials.
 
-### Setting up the Backend
+![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/f6db72ec-7d8c-4f4c-ae7a-55d99dd20ce9)
 
-1. **Fork and Clone the Repository**
+#
 
-   ```bash
-   git clone https://github.com/{your-username}/wanderlust.git
-   ```
+5) Now, It's time to integrate SonarQube Server with Jenkins, go to <b><i><u> Manage Jenkins </u></i></b>, then <b><i><u> System </u></i></b> and look for <b><i><u> SonarQube Servers </u></i></b> and add SonarQube.
 
-2. **Navigate to the Backend Directory**
+![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/54849cb2-fe56-4acd-972d-3057a0eb3deb)
 
-   ```bash
-   cd backend
-   ```
+#
 
-3. **Install Required Dependencies**
+6) Go to <b><i><u> Manage Jenkins </u></i></b>, then <b><i><u> tools </u></i></b>, look for <b><i><u> SonarQube Scanner installations </u></i></b> and add SonarQube Scanner.
 
-   ```bash
-   npm i
-   ```
+> Note: Add name as ```Sonar```
 
-4. **Set up your MongoDB Database**
+![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/1fe926f6-a844-42d4-bce4-62193dde6640)
 
-   - Open MongoDB Compass and connect MongoDB locally at `mongodb://localhost:27017`.
+7) Integrate OWASP with Jenkins, go to <b><i><u> Manage Jenkins </u></i></b>, then <b><i> tools </i></b>, look for <b><i><u>Dependency-Check installations</u></i></b> and add Dependency-Check.
 
-5. **Import sample data**
+> Note: Add name as ```dc```
 
-   > To populate the database with sample posts, you can copy the content from the `backend/data/sample_posts.json` file and insert it as a document in the `wanderlust/posts` collection in your local MongoDB database using either MongoDB Compass or `mongoimport`.
+![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/14516995-0c96-4110-bb96-97a37a9fe57d)
 
-   ```bash
-   mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray
-   ```
+#
 
-6. **Configure Environment Variables**
+8) For trivy, we have already installed it, in pre-reuisites.
 
-   ```bash
-   cp .env.sample .env
-   ```
-
-7. **Start the Backend Server**
-
-   ```bash
-   npm start
-   ```
-
-   > You should see the following on your terminal output on successful setup.
-   >
-   > ```bash
-   > [BACKEND] Server is running on port 5000
-   > [BACKEND] Database connected: mongodb://127.0.0.1/wanderlust
-   > ```
-
-### Setting up the Frontend
-
-1. **Open a New Terminal**
-
-   ```bash
-   cd frontend
-   ```
-
-2. **Install Dependencies**
-
-   ```bash
-   npm i
-   ```
-
-3. **Configure Environment Variables**
-
-   ```bash
-   cp .env.sample .env.local
-   ```
-
-4. **Launch the Development Server**
-
-   ```bash
-   npm run dev
-   ```
+![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/0fcd1620-bd64-4286-bc13-f6652d4527c6)
