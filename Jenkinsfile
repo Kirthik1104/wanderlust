@@ -9,6 +9,11 @@ pipeline{
                 git url: "https://github.com/Kirthik1104/wanderlust.git", branch: "DevSecOps"
             }
         }
+        stage('Starting the SonarQube Server'){
+            steps{
+                sh "docker-compose up -d sonarqube-server"
+            }
+        }
         stage('SonarQube Quality Analysis'){
             steps{
                 withSonarQubeEnv('Sonar'){
