@@ -43,7 +43,7 @@ pipeline{
         }
         stage('Deployment Using Docker Compose'){
             steps{
-                sh "docker-compose down && docker-compose up -d"
+                sh "docker-compose up -d"
             }
         }
     }
