@@ -1,4 +1,7 @@
 # End to End DevSecOps Project `- Using Jenkins, CI/CD, Docker, Docker-Compose, Sonarqube, Owasp Dependency Check, Trivy`
+```bash
+> Please check the DevSecOps branch for a complete project following above tech stack
+```
 
 ## Introduction
 
