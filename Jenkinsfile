@@ -11,7 +11,7 @@ pipeline{
         }
         stage('Starting the SonarQube Server'){
             steps{
-                sh "docker-compose up -d sonarqube"
+                sh "docker start sonarqube-server"
             }
         }
         stage('SonarQube Quality Analysis'){
