@@ -15,7 +15,7 @@ In the ever-evolving landscape of software development, the integration of secur
 - SonarQube Quality Gates: `Criteria set to ensure code quality and security standards are met before code is deployed.`
 - Trivy: `Vulnerability scanner for container images, providing insights into security risks.`
 ```
-## Project Overview--> Checking
+## Project Overview
 
 This project focuses on deploying a 3-tier application using Docker and implementing Continuous Integration/Continuous Deployment (CI/CD) pipelines with Jenkins. The emphasis is on incorporating DevSecOps practices throughout the development and deployment process. By following along with this project, you will gain practical experience with each of the covered tools and learn how to seamlessly integrate security into your DevOps workflow.
 
@@ -111,3 +111,45 @@ This project focuses on deploying a 3-tier application using Docker and implemen
 8) For trivy, we have already installed it, in pre-reuisites.
 
 ![image](https://github.com/DevMadhup/node-todo-cicd/assets/121779953/0fcd1620-bd64-4286-bc13-f6652d4527c6)
+
+#
+
+9) Now, It's time to create a CI/CD pipeline in Jenkins:
+
+- Click on New Item and give it a name and select Pipeline.
+- Select GitHub Project and paste your GitHub repository link.
+- Scroll down and in Pipeline section select Pipeline script from SCM, because our Jenkinsfile is present on GitHub.
+
+
+## Results
+```bash
+    SonarQube & SonarQube Scanner:
+``` 
+- SonarQube is an open-source platform developed by SonarSource for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities on 20+ programming languages. It helps developers to write cleaner, safer, and more maintainable code. SonarQube provides a dashboard that gives an overview of the code quality of a project and allows developers to drill down into specific issues that need to be addressed.
+
+![Alt text](https://i.imgur.com/L5Y8zZZ.png)
+
+![Alt text](https://i.imgur.com/ThWQwTQ.png)
+
+![Alt text](https://i.imgur.com/hlcIgVA.png)
+
+```bash
+ OWASP Dependency Check: 
+```
+- Security vulnerability scans to detect and address security issues in code or dependencies (e.g., OWASP Dependency-Check).
+
+![Alt text](https://i.imgur.com/8fpPWae.png)
+  
+```bash
+Trivy
+```
+- Trivy is an open-source vulnerability scanner for containers and other artifacts. It's designed to scan container images, file systems, and software packages for known vulnerabilities. Trivy is developed by Aqua Security and is widely used in the DevOps and container security communities.
+
+- With Trivy, developers and security teams can integrate vulnerability scanning into their CI/CD pipelines to ensure that containerized applications are free from known security vulnerabilities before deployment.
+
+![Alt text](https://i.imgur.com/61PML7a.png)
+
+```bash
+CI/CD Pipeline Integrated with Jenkins, Webhooks, docker, docker-compose & EC2 
+```
+![Alt text](https://i.imgur.com/zlD15xQ.png)
