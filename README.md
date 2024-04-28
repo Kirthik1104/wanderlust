@@ -5,8 +5,9 @@
 In the ever-evolving landscape of software development, the integration of security practices into the development and deployment processes has become paramount. DevSecOps, an extension of DevOps, emphasizes the seamless integration of security into the software development lifecycle. This project serves as an exploration of various DevOps and DevSecOps tools, providing hands-on experience with their implementation.
 
 ## Tools Covered
+
+> Linux: `The foundational operating system for hosting our DevOps and DevSecOps tools.`
 ```bash
-- **Linux**: The foundational operating system for hosting our DevOps and DevSecOps tools.
 - **Git and GitHub**: Version control system and collaboration platform for managing code repositories.
 - **Docker**: Containerization platform used for packaging applications and their dependencies into standardized units.
 - **Docker-compose**: Tool for defining and running multi-container Docker applications.
