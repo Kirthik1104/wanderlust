@@ -11,12 +11,15 @@ pipeline{
         }
         stage('Starting the SonarQube Server'){
             steps{
-                sh "docker-compose down && docker-compose up -d sonarqube"
+                sh "docker-compose down"
+                sh "docker-compose up -d sonarqube"
             }
         }
         stage('SonarQube Quality Analysis'){
             steps{
                 withSonarQubeEnv('Sonar'){
+                    echo "Waiting for 5 minutes for sonarqube to start the server"
+                    sleep 300
                     sh "$SONAR_HOME/bin/sonar-scanner -Dsonar.projectKey=wanderlust -Dsonar.projectName=3-tier-application-usingDevSecOps"
                 }
             }
