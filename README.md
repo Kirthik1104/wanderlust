@@ -7,11 +7,10 @@ In the ever-evolving landscape of software development, the integration of secur
 ## Tools Covered
 
 > Linux: `The foundational operating system for hosting our DevOps and DevSecOps tools.`
-```bash
-- **Git and GitHub**: Version control system and collaboration platform for managing code repositories.
-- **Docker**: Containerization platform used for packaging applications and their dependencies into standardized units.
-- **Docker-compose**: Tool for defining and running multi-container Docker applications.
-- **Jenkins CI/CD**: Automation server for building, testing, and deploying software continuously.
+> Git and GitHub: `Version control system and collaboration platform for managing code repositories.`
+> Docker: `Containerization platform used for packaging applications and their dependencies into standardized units.`
+- Docker-compose: `Tool for defining and running multi-container Docker applications.`
+> Jenkins CI/CD: Automation server for building, testing, and deploying software continuously.
 - **SonarQube Scan**: Static code analysis tool for identifying and fixing code quality and security issues.
 - **SonarQube Quality Gates**: Criteria set to ensure code quality and security standards are met before code is deployed.
 - **Trivy**: Vulnerability scanner for container images, providing insights into security risks.
