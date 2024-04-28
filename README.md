@@ -15,7 +15,7 @@ In the ever-evolving landscape of software development, the integration of secur
 - SonarQube Quality Gates: `Criteria set to ensure code quality and security standards are met before code is deployed.`
 - Trivy: `Vulnerability scanner for container images, providing insights into security risks.`
 ```
-## Project Overview
+## Project Overview--> Checking
 
 This project focuses on deploying a 3-tier application using Docker and implementing Continuous Integration/Continuous Deployment (CI/CD) pipelines with Jenkins. The emphasis is on incorporating DevSecOps practices throughout the development and deployment process. By following along with this project, you will gain practical experience with each of the covered tools and learn how to seamlessly integrate security into your DevOps workflow.
 
