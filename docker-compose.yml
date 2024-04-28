@@ -1,11 +1,5 @@
 version: "3.8"
 services:
-  sonarqube:
-    container_name: sonarqube-server
-    image: sonarqube:lts-community
-    ports: 
-    - "9000:9000"
-
   frontend:
     container_name: frontend-run
     build: ./frontend
