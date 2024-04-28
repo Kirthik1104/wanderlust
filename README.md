@@ -1,4 +1,4 @@
-# End to End DevSecOps Project
+# End to End DevSecOps Project `- Using Jenkins, CI/CD, Docker, Docker-Compose, Sonarqube, Owasp Dependency Check, Trivy`
 
 ## Introduction
 
