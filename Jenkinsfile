@@ -43,7 +43,7 @@ pipeline{
         }
         stage('Deployment Using Docker Compose'){
             steps{
-                sh "docker-compose down"
+                sh "docker-compose down --remove-orphans" 
                 sh "docker-compose up -d"
                 sleep 60
                 sh "docker exec bf289ed90d07 mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray" 
