@@ -45,7 +45,7 @@ pipeline{
             steps{
                 sh "docker-compose up -d"
                 sleep 60
-                sh "docker exec b039e1fd3541 mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray" 
+                sh "docker exec bf289ed90d07 mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray" 
             }
         }
     }
