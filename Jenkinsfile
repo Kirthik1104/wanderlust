@@ -18,7 +18,7 @@ pipeline{
             steps{
                 withSonarQubeEnv('Sonar'){
                     echo "Waiting for 5 minutes for sonarqube to start the server"
-                    sleep 300
+                    sleep 60
                     sh "$SONAR_HOME/bin/sonar-scanner -Dsonar.projectKey=wanderlust -Dsonar.projectName=3-tier-application-usingDevSecOps"
                 }
             }
@@ -44,6 +44,8 @@ pipeline{
         stage('Deployment Using Docker Compose'){
             steps{
                 sh "docker-compose up -d"
+                sleep 60
+                sh "docker exec -it b039e1fd3541 mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray" 
             }
         }
     }
