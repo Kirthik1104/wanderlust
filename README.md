@@ -29,7 +29,7 @@ This project focuses on deploying a 3-tier application using Docker and implemen
 
 # Wanderlust - Your Ultimate Travel Blog 🌍✈️
 
-## Setting up the project locally
+## 1) Setting up the project locally `Also checkout appropriate branch for deployment using docker-compose and through DevSecOps Principle`
 
 ### Setting up the Backend
 
