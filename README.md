@@ -22,19 +22,12 @@ This project focuses on deploying a 3-tier application using Docker and implemen
 ![Alt text](https://i.imgur.com/NxmCiA5.png)
 
 
----
-
-Feel free to explore the sections below for detailed instructions, insights, and hands-on experience with each tool and aspect of the project. Let's dive into the world of DevOps and DevSecOps together!
 
 
 
 
 
 # Wanderlust - Your Ultimate Travel Blog 🌍✈️
-
-
-## 🎯 Goal of this project
-
 
 ## Setting up the project locally
 
