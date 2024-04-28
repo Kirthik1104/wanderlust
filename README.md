@@ -153,3 +153,16 @@ Trivy
 CI/CD Pipeline Integrated with Jenkins, Webhooks, docker, docker-compose & EC2 
 ```
 ![Alt text](https://i.imgur.com/zlD15xQ.png)
+
+
+###Application
+![Alt text](https://i.imgur.com/qmYDjPl.png)
+
+![Alt text](https://i.imgur.com/i191G2u.png)
+
+![Alt text](https://i.imgur.com/ODg4UIv.png)
+
+###MongoDb
+![Alt text](https://i.imgur.com/8SwgC5D.png)
+
+- Check the last updated entry in data and also in the application. Integration done successfully!
